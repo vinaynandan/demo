@@ -1,4 +1,4 @@
-192.168.23.137 - centos server
+
 
 centralized  verrsion control syystem
 distributed version  c s
