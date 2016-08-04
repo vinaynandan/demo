@@ -1,0 +1,196 @@
+192.168.23.137 - centos server
+
+centralized  verrsion control syystem
+distributed version  c s
+yum install git
+
+
+git config --global user.name "lucky"
+git config --global user.email "vinay@gmail.com"
+
+# switch to home
+cd
+
+# create a directory and switch into it
+mkdir repo01
+cd repo01
+
+# create a new directory
+mkdir datafiles 
+Every Git repository is stored in the .git folder of the directory in which the Git repository has been created. This directory contains the complete history of the repository. The .git/config file contains the configuration for the repository
+# you should still be in the repo01 directory
+cd ~/repo01
+
+# initialize the Git repository
+# for the current directory
+git init
+
+git clone http://github.com/kumarkvk.git
+
+now i made some changes ,  need to save the new changes
+
+command is git add
+git add filename
+git add direc-name
+git add .
+
+git commit
+
+git status
+
+
+Create new content
+
+Use the following commands to create several new files.
+
+# switch to your Git repository
+cd ~/repo01
+
+# create an empty file in a new directory
+touch datafiles/data.txt
+
+# create a few files with content
+ls > test01
+echo "git example" > test02
+echo "example2git" > test03
+Run it via the following command.
+
+git status 
+The output looks similar to the following listing.
+
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    datafiles/
+    test01
+    test02
+    test03
+
+nothing added to commit but untracked files present (use "git add" to track) 
+Add files to the staging area
+# add all files to the index of the Git repository
+git add . 
+Afterwards run the git status command again to see the current status.
+
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+    new file:   datafiles/data.txt
+    new file:   test01
+    new file:   test02
+    new file:   test03 
+Change files that are staged
+# append a string to the test03 file
+echo "examplefile2" >> test03 
+
+# see the result
+git status 
+
+Validate that the new changes are not yet staged.
+
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+    new file:   datafiles/data.txt
+    new file:   test01
+    new file:   test02
+    new file:   test03
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+    modified:   test03 
+Add the new changes to the staging area.
+
+# add all files to the index of the Git repository
+git add . 
+Use the git status command again to see that all changes are staged.
+
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+    new file:   datafiles/data.txt
+    new file:   test01
+    new file:   test02
+    new file:   test03 
+
+Commit staged changes to the repository
+git commit -m "Initial commit"
+
+git commit  
+
+viewing git commit
+git log 
+
+Remove files
+ remove the "test03" file
+rm test03
+# add and commit the removal
+git add .
+# if you use Git version < 2.0 use: git add -A .
+git commit -m "Removes the test03 file" 
+
+Correct the last commit with git amend
+
+The git commit --amend command makes it possible to replace the last commit. This allows you to change the last commit including the commit message.
+digitalocean.com
+git remote  add origin github.com/repo.git
+
+git push  allows ou to send data to other repo.
+git pull get latest changes from another repo
+
+git revert
+git reset 
+git rebase moving a branch to a new base commit 
+git rebase branchname
+
+master
+
+bugfix/firstbug
+bugfix/releasebug
+
+testing/qatesting
+testing/ui
+release
+develop
+
+branches
+git branch
+ how to create a branch 
+git branch developer1
+git branch -m oldname newname 
+rename a branch
+git branch -m oldname newname
+
+git push origin master 
+
+git push origin otherbranch
+
+checkout
+git checkout 
+
+STASH
+
+
+
+
+
+
+
